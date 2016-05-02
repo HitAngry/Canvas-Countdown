@@ -66,10 +66,10 @@ var countdown = function(canvasId,dateEnding){
 			var now = new Date().getTime();
 			var time = convertMS(dateEnding - now);
 			clearCanvas();
-			drawCircle("SECONDES", time.seconds, time.secondsRatio, ((radius * 7) + lineWidth * 7 ) + marginRight * 3);
-			drawCircle("MINUTES", time.minutes, time.minutesRatio, ((radius * 5) + lineWidth * 5 ) + marginRight * 2);
-			drawCircle("HEURES", time.hours, time.hoursRatio, ((radius * 3) + lineWidth * 3 ) + marginRight);
-			drawCircle("JOURS", time.days, time.daysRatio, (radius * 1) + lineWidth);
+			drawCircle("SECONDES", time.seconds, time.secondsRatio, (((canvas.width / 2 ) + marginRight) + ( radius * 3 )) + ( lineWidth * 2 ));
+			drawCircle("MINUTES", time.minutes, time.minutesRatio, (((canvas.width / 2 ) + ( marginRight / 2 )) + radius ) + ( lineWidth / 2 ));
+			drawCircle("HEURES", time.hours, time.hoursRatio, (((canvas.width / 2 ) - ( marginRight / 2 )) - radius ) - ( lineWidth / 2 ));
+			drawCircle("JOURS", time.days, time.daysRatio, (((canvas.width / 2 ) - marginRight) - ( radius * 3 )) - ( lineWidth * 2 ));
 		},1000);
 	};
 };

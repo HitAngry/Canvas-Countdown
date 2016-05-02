@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="UTF-8">
+	<title>Demo simple canvas countdown</title>
+	<script type="text/javascript" src="./canvas-countdown.js"></script>
+	<style type="text/css">
+    canvas {
+	    padding: 0;
+	    margin: auto;
+	    display: block;
+	    width: 700px;
+    }
+	</style>
+</head>
+<body>
+	<canvas id="CountdownCanvas" width="700" height="150" />
+	<script type="text/javascript">
+		var beginEvent = new Date(2016, 06, 23, 6, 00);
+		var ticketingOpened = new countdown("CountdownCanvas", beginEvent.getTime()); 
+		    ticketingOpened.update() 
+	</script>
+</body>
+</html>
